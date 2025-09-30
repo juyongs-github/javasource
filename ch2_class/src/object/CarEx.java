@@ -2,6 +2,8 @@ package object;
 
 public class CarEx {
     public static void main(String[] args) {
+        int x = 10;
+
         // Car 인스턴스 생성
         Car car = new Car();
 
@@ -27,5 +29,18 @@ public class CarEx {
 
         car3.setColor("green");
         System.out.println(car3);
+    }
+
+    public static void println(Car car) {
+        System.out.println("-------------------------------------");
+        System.out.println("제조회사 : " + car.getCompanyName());
+        System.out.println("모델명 : " + car.getModel());
+        System.out.println("색상 : " + car.getColor());
+        System.out.println("최고속도 : " + car.getMaxSpeed());
+        System.out.println("-------------------------------------");
+    }
+
+    public static void test(String str) {
+
     }
 }
