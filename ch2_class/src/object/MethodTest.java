@@ -1,5 +1,9 @@
 package object;
 
+// 메서드
+// 1. 인스턴스(맴버) 메서드 : 클래스 영역 => 인스턴스 생성 후
+// 2. 클래스 메서드 : 클래스 영역(static) => 클래스가 메모리에 올라갈 때(공유의 의미)
+
 public class MethodTest {
     // 두 개의 인자(매개변수)를 받아서 덧셈 후 뎃셈 결과 리턴
     int add(int num1, int num2) {
