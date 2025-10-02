@@ -14,5 +14,8 @@ public class ChildEx {
 
         System.out.println(child2.age);
         child2.list();
+
+        System.out.println("name : " + child.name);
+        System.out.println("name : " + child.name.length());
     }
 }

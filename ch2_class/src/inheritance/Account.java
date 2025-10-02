@@ -3,13 +3,24 @@ package inheritance;
 public class Account {
     // 은행 계좌
     // 계좌 번호, 계좌주, 잔액
-    String accountNo;
-    String owner;
-    long balance;
+    private String accountNo;
+    private String owner;
+    private long balance;
+
+    public Account(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public Account(String accountNo, String owner) {
+        // this.accountNo = accountNo;
+        this(accountNo);
+        this.owner = owner;
+    }
 
     public Account(String accountNo, String owner, long balance) {
-        this.accountNo = accountNo;
-        this.owner = owner;
+        // this.accountNo = accountNo;
+        // this.owner = owner;
+        this(accountNo, owner);
         this.balance = balance;
     }
 

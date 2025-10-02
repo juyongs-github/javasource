@@ -12,9 +12,12 @@ public class CreditLineAccount extends Account {
     @Override
     long withdraw(long amount) throws Exception {
         // 예금액 + 마이너스 한도 안에서 출금 허용
-        if (amount > balance + minusLimit) {
+        if (amount > getBalance() + minusLimit) {
             throw new Exception("한도 초과");
         }
-        return balance -= amount;
+        // super 키워드 안 붙여도 상관 없음
+        setBalance(getBalance() - amount);
+        // super.setBalance(super.getBalance() - amount);
+        return getBalance();
     }
 }
