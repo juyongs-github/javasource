@@ -7,18 +7,25 @@ package lang;
 //     2) 런타임 예외 : 실행해봐야 알 수 있는 예외 => ex) ArithmeticException
 //     - 처리 방법
 //     1) 예외 처리
+//         => try {} catch(Exception) {}
+//         => try - catch - finally
 //     2) 예외 던지기
+//         => 메서드() throws exception1, exception2...
+//     - 강제 Exception 발생 시키기
+//         => throw new Exception();
 //  Error
 
 public class ExceptionEx1 {
     public static void main(String[] args) {
         System.out.println(4 / 0);
         try {
-            // 예외가 발생할 수 있는 코드 작성
-            Class.forName("aaa");
+            findClass();
         } catch (ClassNotFoundException e) {
-            //
-            e.printStackTrace(); // 개발자 확인용 (예외 발생이 어디서 났는지 추적)
+            e.printStackTrace();
         }
+    }
+
+    public static void findClass() throws ClassNotFoundException {
+        Class.forName("aaa");
     }
 }
