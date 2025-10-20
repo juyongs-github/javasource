@@ -29,6 +29,8 @@ public class ShopEx {
         // User user = new User("제니", PayType.CARD);
 
         MyShop myShop = new MyShop();
+        MyShop2 myShop2 = new MyShop2();
+
         // 상점명 지정
         myShop.setTitle("잡다한 상점");
         // 사용자 등록
