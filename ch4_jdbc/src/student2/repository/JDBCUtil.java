@@ -31,7 +31,7 @@ public class JDBCUtil {
         try {
             con.commit();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -39,7 +39,7 @@ public class JDBCUtil {
         try {
             con.rollback();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -49,7 +49,7 @@ public class JDBCUtil {
                 con.close();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -59,7 +59,7 @@ public class JDBCUtil {
                 ps.close();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -69,7 +69,7 @@ public class JDBCUtil {
                 rs.close();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 }
